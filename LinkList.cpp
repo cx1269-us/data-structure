@@ -76,7 +76,41 @@ else{
     return true;
    }
 }
-
+template<T>
+int LinkListClass<T>:LocateElem(T e)  
+{
+    int i=1;LinkList<T> *p;
+    p=head->next;
+    while(p!=NULL&&->data!=e)
+    {
+        p=p->next;
+        i++
+    }
+    if(p==NULL) return(0);
+    else return (i);
+}
+template<T>
+bool LinkListClass<T>::ListInert(int i,T e)                 //插入元素
+{
+    int j=0;LinkList<T> *s,*p;
+    if(i<1) return false;
+    p=head;
+    while(j<i-1&&p!=NULL)
+    {
+        i++;
+        p=p->next;
+    }
+    if (p==NULL) return false;
+    else{
+        s=new LinkList<T>
+        s->data=e;
+        s-next=p->next;
+        p->next=s;
+        return turn;        
+    }
+}
+template<T>
+bool LinkListClass<T>::ListDelete(int i)                    //删除元素
 int main()
 {
     cout << "Hello world!" << endl;
